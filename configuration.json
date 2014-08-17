@@ -1,0 +1,29 @@
+[
+    {
+        "type": "title",
+        "title": "Configuration"
+    },
+    {
+        "type": "string",
+        "title": "Host",
+        "desc": "Define the host to connect to",
+        "section": "default",
+        "key": "host",
+    },
+    {
+        "type": "title",
+        "title": "HTTP"
+    },
+    {
+        "type": "bool",
+        "title": "Fullscreen",
+        "desc": "Set the window in windowed or fullscreen",
+        "section": "graphics",
+        "key": "fullscreen",
+        "true": "auto"
+    },
+    {
+        "type": "title",
+        "title": "TCP"
+    }
+]
