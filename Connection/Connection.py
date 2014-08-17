@@ -38,7 +38,7 @@ class Connection(BoxLayout):
     def AudioLibraryButton(self):
         self.AudioLibraryButton = Button(text='Audio Library', on_press=self.callback_AudioLibrary())
         try:
-            AudioLibrary = xbmc_instance.AudioLibrary()
+            AudioLibrary = self.xbmc_instance.AudioLibrary()
             self.add_widget(self.AudioLibraryButton)
         except:
             print "Error Audio Library"
