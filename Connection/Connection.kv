@@ -1,8 +1,15 @@
 #: import BoxLayout kivy.uix.boxlayout
 
 <Connection>:
+	orientation: 'vertical'
+	padding: 20
     BoxLayout:
-        orientation: "vertical"
         Button:
             text: 'Return'
             on_press: root.Root_callback()
+	Button:
+	    text: 'Video Library'
+	    on_press: Connection.VideoLibrary_callback()
+	Button:
+	    text: 'Audio Library'
+	    on_press: Connection.AudioLibrary_callback()

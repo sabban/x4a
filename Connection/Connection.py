@@ -13,7 +13,6 @@ class Connection(BoxLayout):
     def __init__(self, **kwargs):
         super(Connection, self).__init__(**kwargs)
         config = x4a.X4aApp.get_running_app().config
-        self.orientation = "vertical"
         self.host = config.get('General', 'host')
         self.username = config.get('HTTP', 'username')
         self.HTTP_password = config.get('HTTP', 'password')
@@ -25,25 +24,21 @@ class Connection(BoxLayout):
         self.AudioLibraryButton()
 
     def VideoLibraryButton(self):
-        self.VideoLibraryButton = Button(text='Video Library', on_press=self.callback_VideoLibrary())
         try:
             VideoLibrary = self.xbmc_instance.VideoLibrary()
-            self.add_widget(self.VideoLibraryButton)
         except:
             print "Error"
-
-    def callback_VideoLibrary(self):
+            
+    def VideoLibrary_callback(self):
         print "Videolibrary"
         
     def AudioLibraryButton(self):
-        self.AudioLibraryButton = Button(text='Audio Library', on_press=self.callback_AudioLibrary())
         try:
             AudioLibrary = self.xbmc_instance.AudioLibrary()
-            self.add_widget(self.AudioLibraryButton)
         except:
             print "Error Audio Library"
 
-    def callback_AudioLibrary(self):
+    def AudioLibrary_callback(self):
         print "Audiolibrary"
         
     def Root_callback(self):
